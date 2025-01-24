@@ -1,0 +1,47 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(120deg, #000000, #1a1a1a, #000000);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  color: #fff;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hiệu ứng nền chuyển động */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  color: #ff99cc;
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 20px;
+  text-shadow: 0 0 20px #ff66ff, 0 0 30px #ff33cc, 0 0 40px #ff33ff;
+  animation: glow 2s infinite;
+}
+
+/* Hiệu ứng phát sáng cho tiêu đề */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 20px #ff66ff, 0 0 30px #ff33cc, 0 0 40px #ff33ff;
+  }
+  50% {
+    text-shadow: 0 0 30px #ff99ff, 0 0 50px #ff66ff, 0 0 60px #ff99ff;
+  }
+}

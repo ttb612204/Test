@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday to You!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(120deg, #ff7eb3, #ff758c, #feb47b);
+      background-size: 400% 400%;
+      animation: gradientBG 8s ease infinite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 5rem;
+      margin-bottom: 20px;
+      color: #fff9c4;
+      text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 2s ease;
+    }
+
+    img#cake {
+      width: 250px;
+      height: auto;
+      margin: 20px 0;
+      animation: bounce 2s infinite;
+      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+
+    .loi-chuc {
+      font-size: 1.7rem;
+      margin: 20px auto;
+      max-width: 80%;
+      color: #ffe4b5;
+      line-height: 1.6;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+      animation: fadeInText 3s ease;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+
+    button#button {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.4rem;
+      padding: 15px 30px;
+      color: #fff;
+      background: linear-gradient(120deg, #ff6a95, #fe8c42);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    button#button:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      opacity: 0.7;
+      border-radius: 50%;
+      animation: fall 3s infinite linear;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) translateX(calc(200px - 100vw));
+        opacity: 0.3;
+      }
+    }
+    .loi-chuc {
+  font-size: 1.5rem;
+  margin: 20px auto;
+  line-height: 1.8;
+  text-align: center;
+  color: #ffe4e1;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <h1>Happy Birthday to You!</h1>
+  <img id="cake" src="cake.gif" alt="Birthday Cake">
+  <h3 class="loi-chuc">
+    Chúc bạn một sinh nhật thật đặc biệt và đáng nhớ! Mong rằng ngày hôm nay sẽ tràn ngập tiếng cười, niềm vui và những khoảnh khắc tuyệt vời bên gia đình, bạn bè. Tuổi mới sẽ mang đến cho bạn thật nhiều may mắn, thành công và những cơ hội mới để khám phá bản thân. Hãy luôn giữ nụ cười rạng rỡ trên môi và bước tiếp trên con đường đầy ước mơ của mình. Happy Birthday! 🎉🎂🎁
+  </h3>
+    <div class="button">
+    <button id="button" onclick="location.href='firework.html'">Khám phá điều bất ngờ!</button>
+  </div>
+  <script>
+    // Tạo hiệu ứng rơi giấy màu
+    function createConfetti() {
+      const body = document.querySelector('body');
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        confetti.style.backgroundColor =
+          `hsl(${Math.random() * 360}, 100%, 80%)`;
+        body.appendChild(confetti);
+      }
+    }
+    createConfetti();
+  </script>
+</body>
+
+</html>

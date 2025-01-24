@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday to You!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+      background-size: 400% 400%;
+      animation: gradientBG 6s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 250px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+      box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    div {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+      animation: bounceIn 2s ease;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      50% {
+        opacity: 0.9;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Hiệu ứng ngôi sao */
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url('https://i.imgur.com/f6B5lIH.png') repeat;
+      background-size: contain;
+      animation: starry 30s linear infinite;
+    }
+
+    @keyframes starry {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -2000px 2000px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+  <div>
+    <h1>HÃY BẤM VÀO HỘP QUÀ BÊN DƯỚI!</h1>
+    <a href="hop-qua.html"><img src="birthday_gift.png" alt="birthday gift"></a>
+  </div>
+</body>
+
+</html>

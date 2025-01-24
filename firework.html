@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday to You!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+      background-size: 200% 200%;
+      animation: gradientBG 10s ease infinite;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 50px 0 20px;
+      text-shadow: 0 0 20px #ff7eb3, 0 0 40px #ffb199, 0 0 60px #ff7eb3;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 20px #ff7eb3, 0 0 40px #ffb199, 0 0 60px #ff7eb3;
+      }
+      to {
+        text-shadow: 0 0 30px #ffb3ff, 0 0 50px #ffa6e9, 0 0 70px #ffb3ff;
+      }
+    }
+
+    .scroll {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      animation: pulse 1.5s infinite;
+      color: #fff;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+    }
+
+    .scroll-arrow {
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Happy Birthday! 🎉</h1>
+  <script src="particle.js"></script>
+  <script src="firework.js"></script>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
